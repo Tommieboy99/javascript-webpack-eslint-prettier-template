@@ -6,6 +6,8 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 export default defineConfig([
   // 1. Source files (browser)
   {
+    ignores: ['dist/**', 'node_modules/**', 'package-lock.json'],
+
     files: ['src/**/*.{js,mjs,cjs}'],
     plugins: { js },
     extends: ['js/recommended'],
